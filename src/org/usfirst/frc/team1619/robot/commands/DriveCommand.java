@@ -1,12 +1,9 @@
 package org.usfirst.frc.team1619.robot.commands;
 
-import edu.wpi.first.wpilibj.GenericHID;
+import org.usfirst.frc.team1619.robot.Robot;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
-
-import org.omg.PortableInterceptor.ObjectIdHelper;
-import org.usfirst.frc.team1619.robot.Robot;
-import org.usfirst.frc.team1619.robot.subsystems.DriveTrain;
 
 /**
  *
@@ -38,10 +35,12 @@ public class DriveCommand extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.getRobot().driveTrain.stop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }

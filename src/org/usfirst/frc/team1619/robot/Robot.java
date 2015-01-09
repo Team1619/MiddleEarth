@@ -25,8 +25,9 @@ public class Robot extends IterativeRobot {
 		return robot;
 	}
 	
-	public final DriveTrain driveTrain = new DriveTrain();
 	public OI oi;
+	
+	public final DriveTrain driveTrain = new DriveTrain();
 
     public Command autonomousCommand;
 
@@ -36,8 +37,6 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
 		oi = new OI();
-		
-		
     }
 	
 	public void disabledPeriodic() {

@@ -1,6 +1,5 @@
 package org.usfirst.frc.team1619.robot.subsystems;
 
-import org.usfirst.frc.team1619.robot.Robot;
 import org.usfirst.frc.team1619.robot.RobotMap;
 import org.usfirst.frc.team1619.robot.commands.DriveCommand;
 
@@ -36,6 +35,10 @@ public class DriveTrain extends Subsystem {
     
     public void drive(GenericHID inputDevice) {
     	drive.arcadeDrive(inputDevice);
+    }
+    
+    public void stop() {
+    	drive.stopMotor();
     }
 }
 
