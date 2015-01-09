@@ -18,7 +18,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 public class Robot extends IterativeRobot {
 
 	private static Robot robot;
-	private Robot() {
+	public Robot() {
 		robot = this;
 	}
 	static public Robot getRobot() {
