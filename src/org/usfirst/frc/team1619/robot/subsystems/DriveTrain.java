@@ -12,9 +12,9 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  *
  */
 public class DriveTrain extends Subsystem {
-	RobotDrive drive;	
-    Talon leftMotor;
-    Talon rightMotor;
+	private RobotDrive drive;	
+    private Talon leftMotor;
+    private Talon rightMotor;
 
     public DriveTrain() {
     	leftMotor = new Talon(RobotMap.leftMotor);
