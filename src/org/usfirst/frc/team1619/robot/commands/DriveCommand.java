@@ -2,7 +2,7 @@ package org.usfirst.frc.team1619.robot.commands;
 
 import org.usfirst.frc.team1619.robot.Robot;
 
-import edu.wpi.first.wpilibj.Joystick;
+//import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -10,22 +10,22 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class DriveCommand extends Command {
 	
-	Joystick leftJoystick;
+	//Joystick leftJoystick; 
 	
     public DriveCommand() {
         // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
     	requires(Robot.getRobot().driveTrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	leftJoystick = Robot.getRobot().oi.getLeftJoystick();
+    	//leftJoystick = Robot.getRobot().oi.getLeftJoystick();  This creates an entirely separate instance of 
+    															//the joystick that already exists in IO, so it's not needed?
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.getRobot().driveTrain.drive(leftJoystick);
+    	Robot.getRobot().driveTrain.drive(Robot.getRobot().oi.getLeftJoystick()); //Just give it the joystick directly
     }
 
     // Make this return true when this Command no longer needs to run execute()

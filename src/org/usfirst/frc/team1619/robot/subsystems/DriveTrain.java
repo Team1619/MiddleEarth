@@ -15,13 +15,10 @@ public class DriveTrain extends Subsystem {
 	RobotDrive drive;	
     Talon leftMotor;
     Talon rightMotor;
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
 
     public DriveTrain() {
     	leftMotor = new Talon(RobotMap.leftMotor);
     	rightMotor = new Talon(RobotMap.rightMotor);
-   
     	
     	drive = new RobotDrive(leftMotor, rightMotor);
     	drive.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
