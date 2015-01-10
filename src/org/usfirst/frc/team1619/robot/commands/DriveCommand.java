@@ -2,7 +2,10 @@ package org.usfirst.frc.team1619.robot.commands;
 
 import org.usfirst.frc.team1619.robot.Robot;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 334184e03ea163f2cc1806f644eb21789f969c12
 import edu.wpi.first.wpilibj.Joystick;
 //import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
@@ -22,6 +25,10 @@ public class DriveCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+<<<<<<< HEAD
+=======
+    	
+>>>>>>> 334184e03ea163f2cc1806f644eb21789f969c12
     }
 
     // Called repeatedly when this Command is scheduled to run
