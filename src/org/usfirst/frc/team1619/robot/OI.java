@@ -1,6 +1,9 @@
 package org.usfirst.frc.team1619.robot;
 
+import org.usfirst.frc.team1619.robot.commands.KachigCommand;
+
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -14,11 +17,24 @@ public class OI {
     // Joystick stick = new Joystick(port);
     // Button button = new JoystickButton(stick, buttonNumber);
     
-	private final static Joystick leftJoystick = new Joystick(RobotMap.leftJoystick);
+	private final Joystick leftJoystick;
+	
+	private final JoystickButton kachigLeftButton;
+	private final JoystickButton kachigRightButton;
+	
+	public OI() {
+		leftJoystick = new Joystick(RobotMap.leftJoystick);
+		kachigLeftButton = new JoystickButton(leftJoystick, RobotMap.kachigLeft);
+		kachigLeftButton.whenPressed(new KachigCommand.KachigLeftCommand());
+		kachigRightButton = new JoystickButton(leftJoystick, RobotMap.kachigRight);
+		kachigRightButton.whenPressed(new KachigCommand.KachigRightCommand());
+	}
 	
 	public Joystick getLeftJoystick() {
 		return leftJoystick;
 	}
+	
+	
 	
 	
     // There are a few additional built in buttons you can use. Additionally,
