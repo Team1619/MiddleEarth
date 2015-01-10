@@ -12,6 +12,7 @@ public class RobotMap {
     public final static int rightMotor = 1;
     
     public final static int leftJoystick = 0;
+    public final static String cameraName = "USB0::0x046D::0x092E::NI-VISA-1003::RAW"; 
     
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:

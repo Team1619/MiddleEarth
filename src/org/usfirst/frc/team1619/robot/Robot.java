@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team1619.robot;
 
+import org.usfirst.frc.team1619.robot.subsystems.CameraSubsystem;
 import org.usfirst.frc.team1619.robot.subsystems.DriveTrain;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -28,6 +29,7 @@ public class Robot extends IterativeRobot {
 	public OI oi;
 	
 	public final DriveTrain driveTrain = new DriveTrain();
+	public final CameraSubsystem cameraSubsystem = new CameraSubsystem();
 
     public Command autonomousCommand;
 

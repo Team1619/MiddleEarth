@@ -19,8 +19,7 @@ public class DriveCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	//leftJoystick = Robot.getRobot().oi.getLeftJoystick();  This creates an entirely separate instance of 
-    															//the joystick that already exists in IO, so it's not needed?
+
     }
 
     // Called repeatedly when this Command is scheduled to run
