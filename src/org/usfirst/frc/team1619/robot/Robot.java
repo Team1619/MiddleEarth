@@ -3,6 +3,7 @@ package org.usfirst.frc.team1619.robot;
 
 import org.usfirst.frc.team1619.robot.subsystems.CameraSubsystem;
 import org.usfirst.frc.team1619.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team1619.robot.subsystems.ServoSystem;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -30,6 +31,7 @@ public class Robot extends IterativeRobot {
 	
 	public final DriveTrain driveTrain = new DriveTrain();
 	public final CameraSubsystem cameraSubsystem = new CameraSubsystem();
+	public final ServoSystem servoSystem = new ServoSystem();
 
     public Command autonomousCommand;
 

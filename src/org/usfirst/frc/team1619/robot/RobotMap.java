@@ -15,6 +15,10 @@ public class RobotMap {
     public final static String cameraName = "cam0"; 
     public final static int kachigLeft = 4;
     public final static int kachigRight = 5;
+    
+    public final static int servoPWMID = 3;
+    public final static int limitSwitchDIOID = 0;
+    
     // If you are using multiple modules, make sure to define both the port
     // number and the module. For example you with a rangefinder:
     // public static int rangefinderPort = 1;
