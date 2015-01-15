@@ -15,6 +15,7 @@ public class ServoCommand extends Command {
         // Use requires() here to declare subsystem dependencies
     	servoSystem = Robot.getRobot().servoSystem;
         requires(servoSystem);
+        //System.out.println("ServoCommand Created");
     }
 
     // Called just before this Command runs the first time
@@ -23,8 +24,12 @@ public class ServoCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	while(servoSystem.getSwitch()) {
+    	System.out.println(servoSystem.getServoPosition());
+    	if(!servoSystem.getSwitch()) {
     		servoSystem.run();
+    	}
+    	else {
+    		servoSystem.stop();
     	}
     }
 

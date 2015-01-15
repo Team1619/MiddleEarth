@@ -17,10 +17,15 @@ public class ServoSystem extends Subsystem {
 	
 	private Servo servo;
 	private DigitalInput limitSwitch;
+	private double servoPosition; 
+	private double servoPositionModifier;
 	
 	public ServoSystem() {
 		servo = new Servo(RobotMap.servoPWMID);
 		limitSwitch = new DigitalInput(RobotMap.limitSwitchDIOID);
+		//System.out.println("ServoSystem Created");
+		servoPosition = servo.getPosition();
+		servoPositionModifier = 0.1;
 	}
 	
     public void initDefaultCommand() {
@@ -33,11 +38,22 @@ public class ServoSystem extends Subsystem {
     }
     
     public void run() {
-    	servo.set(0.5);
+    	servoPosition = servo.getPosition();
+    	if((servoPosition >= 1.0 && servoPositionModifier > 0) || (servoPosition <= 0.0 && servoPositionModifier < 0)) {
+    		servoPositionModifier *= -1;
+    	}
+    	servo.set(servoPosition += servoPositionModifier);
+
+    	System.out.println(servoPosition);
     }
     
     public void stop() {
-    	servo.set(0.0);
+    	servo.set(servoPosition);
+    }
+    
+    public double getServoPosition() {
+    	servoPosition = servo.getPosition();
+    	return servoPosition;
     }
 }
 

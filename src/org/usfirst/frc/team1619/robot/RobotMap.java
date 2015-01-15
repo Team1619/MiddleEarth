@@ -16,7 +16,7 @@ public class RobotMap {
     public final static int kachigLeft = 4;
     public final static int kachigRight = 5;
     
-    public final static int servoPWMID = 3;
+    public final static int servoPWMID = 2;
     public final static int limitSwitchDIOID = 0;
     
     // If you are using multiple modules, make sure to define both the port
